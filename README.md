@@ -1,5 +1,9 @@
 # Toy Robot
 
+#### How do you run me?
+`ruby robot.rb` is all you need. The commands are fed via `commands.txt` file.
+
+You may run the test suite with `rspec`
 #### What is this ?
 
 Toy Robot is a ruby coding exercise that we get our potential candidates  complete for us (Mable) to understand their capabilities.  
