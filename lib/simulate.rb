@@ -21,7 +21,14 @@ class Simulate
     when :turn
       robot.turn(direction: args[:direction])
     when :report
-      puts robot.report
+      robot.report
     end
+  end
+
+  def formatted_commands(commands)
+    return commands if commands.first.start_with?('PLACE')
+
+    first_valid_command_index = commands.index { |c| c.start_with?('PLACE') }
+    commands[first_valid_command_index..commands.length - 1]
   end
 end

@@ -5,7 +5,7 @@ require_relative 'lib/simulate'
 simulate = Simulate.new
 
 commands = File.readlines('commands.txt')
-commands.each do |command|
+simulate.formatted_commands(commands).each do |command|
   command.chomp!
   case command
   when /PLACE./
